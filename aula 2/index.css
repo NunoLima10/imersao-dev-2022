@@ -1,0 +1,89 @@
+:root{
+    --color1:#d7263d;
+    --color2:#02182b;
+    --color3:#0197f6;
+    --color4:#10273a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    color:var(--color1);
+    text-align: center;
+    font: "Bakbak One";
+    font-size: 2em;
+}
+
+.container{
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Noto Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.converter_box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color4);
+    width: 25em;
+    height: 17em;
+    border-radius: .3em;
+    margin-bottom: 2em;  
+}
+.select_box{
+    margin-top: 2em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+.input_box{
+    margin-top: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap:1.5em
+}
+
+.select{
+    width: 12em;
+    height: 3em;
+    border-style: none;
+    color: var(--color1);
+    background-color: white;
+    border-radius: 0.2em;
+    font-weight: 700;
+}
+.input_currency{
+    width: 12em;
+    height: 3em;
+    border-style: None;
+    outline: none;
+    font-weight: 700;
+    padding: 0.4em;
+    font-weight: 700;
+}
+
+#submit_button{
+    width: 26.5em;
+    height: 3em;
+    border-style: None;
+    background-color: var(--color3);
+    border-radius: 0.2em;
+    font-weight: 700;
+    margin-top: 2em;
+    color:var(--color4)
+}
+#erro_satatus{
+    margin-top: 0.3em;
+    color: var(--color1);
+    text-align: center;  
+}

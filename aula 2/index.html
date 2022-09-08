@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Currency Convertor</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="converter_box">
+            <h1 class="title">Currency Convertor</h1>
+            <div class="content">
+                <div class="select_box">
+                    <select class="select" id="select_l" ></select>
+                    <select class="select" id="select_r" ></select>
+                </div>
+                <div class="input_box">
+                    <input id="input_currency" class="input_currency" type="number" min="1" placeholder="currency">
+                    <input id="input_readonly" class="input_currency" type="number" readonly>
+                </div>
+                <button id="submit_button" onclick="currency_convertor()">Converter</button>
+                <p id="erro_satatus"></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
