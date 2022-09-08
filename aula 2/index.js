@@ -1,6 +1,6 @@
-fetch("https://api.frankfurter.app/currencies").then((data) => data.json()).then((data) => {
-  console.log(data)
-
+fetch("https://api.frankfurter.app/currencies")
+.then((data) => data.json())
+.then((data) => {
     currencies_labels(data);
   });
 function currencies_labels(data){
@@ -25,7 +25,7 @@ function converter(currency,to_currency,value){
 
 function currency_convertor(){
   var input_currency = document.getElementById("input_currency")
-  var erro_satatus = document.getElementById("erro_satatus")
+  var status = document.getElementById("status")
   var select_currency = document.getElementById("select_l").value
   var select_to_currency = document.getElementById("select_r").value
 
@@ -33,7 +33,7 @@ function currency_convertor(){
     var value = converter(select_currency,select_to_currency,input_currency.value)
   }
   else{
-    erro_satatus.innerHTML = "Select two different currencies"
+    status.innerHTML = "Select two different currencies"
   }
 
 

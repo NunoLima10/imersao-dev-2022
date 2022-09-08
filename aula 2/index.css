@@ -20,9 +20,8 @@
 .container{
     background-color: var(--color2);
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-
     font-family: 'Noto Sans', sans-serif;
     width: 100vw;
     height: 100vh;
@@ -37,6 +36,7 @@
     height: 17em;
     border-radius: .3em;
     margin-bottom: 2em;  
+    margin-top: 5em;
 }
 .select_box{
     margin-top: 2em;
@@ -82,7 +82,7 @@
     margin-top: 2em;
     color:var(--color4)
 }
-#erro_satatus{
+#status{
     margin-top: 0.3em;
     color: var(--color1);
     text-align: center;  
