@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Random Number</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 class="title">Random Number</h1>
+            <div class="box2">
+                <p class="title2">Enter a number from 0 to 10</p>
+                <input id="input" type="number " min="0" max="10" onkeyup="valid_number()">
+                <button id="submit_button" onclick="test_luck()">Try</button>
+                <p id="status"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

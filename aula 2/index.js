@@ -7,6 +7,7 @@ function currencies_labels(data){
     const select_l = document.getElementById("select_l");
     const select_r = document.getElementById("select_r");
     const entries = Object.entries(data);
+    console.log(entries)
     for(var i = 0 ; entries.length > i; i++){
       select_l.innerHTML += `<option value=${entries[i][0]}>${entries[i][1]}</option>` 
       select_r.innerHTML += `<option value=${entries[i][0]}>${entries[i][1]}</option>` 

@@ -1,0 +1,86 @@
+:root{
+    --color1:#fffcf2;
+    --color2:#CCC5B9;
+    --color3:#403d39;
+    --color4:#252422;
+    --color5:#eb5e28;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: var(--color4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Noto Sans', sans-serif;
+}
+.box{
+    background-color: var(--color3);
+    width: 30em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    border-radius:.3em;
+    transition: 0.2s;
+}
+.title{
+    color: var(--color5);
+    text-align: center;
+    font: "Bakbak One";
+    font-size: 3em;
+}
+.title2{
+    color: var(--color1);
+    text-align: center;
+    font: "Noto Sans";
+    margin-top: 2.5em;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input{
+    margin-top: 1.2em;
+    width: 30em;
+    height: 3em;
+    border-style: none;
+    outline: none;
+    font-weight: 700;
+    padding: 0.4em;
+    font-weight: 700;
+    color: var(--color4);
+}
+#submit_button{
+    margin-top: 1.2em;
+    width: 15em;
+    height: 3em;
+    border-style: none;
+    outline: none;
+    font-weight: 700;
+    border-radius: .2em;
+    padding: 0.4em;
+    font-weight: 700;
+    color:var(--color1);
+    background-color: var(--color5);
+    cursor: pointer;
+}
+#submit_button:hover{
+    background-color: #dc5824;
+}
+#submit_button:disabled{
+    background-color: #8e3d1c;
+    cursor: None;
+}
+#status{
+    color: var(--color1);
+    text-align: center;
+    font: "Noto Sans";
+    margin-top: 1.2em;
+}
