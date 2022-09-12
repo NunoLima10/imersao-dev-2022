@@ -31,7 +31,7 @@ function GenerateMovieCard(name){
 
 function GenerateMovieList(movie_list){
     for(var i = 0; i< movie_list.length ; i++){
-        movie_card = GenerateMovieCard(movie_list[i])
+     movie_card = GenerateMovieCard(movie_list[i])
         movies_box.append(movie_card)
     }
 
@@ -58,4 +58,5 @@ function find(){
     GenerateMovieList(movie_list)
 }
 GenerateMovieList(movies)
+
 
