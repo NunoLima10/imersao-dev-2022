@@ -15,7 +15,7 @@ class SQLite_Connector:
     def create_tables(self) -> None:
         
         if not self.db_exit:
-            sql_file = open("database/bank_simulator.sql")
+            sql_file = open("database/Scoreboards.sql")
             sql_as_string = sql_file.read()
             self.cursor.executescript(sql_as_string)
             print("[INFO] All tables Created")
