@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --color1:#09021d;
+    --color2:#5db7de;
+    --color3:#A7D0DD;
+    --color4:#f1e9db;
+    --color5:#a39b8b;
+    --color6:#716A5C;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,10 +17,59 @@
 .container{
     width: 100vw;
     height: 100vh;
+    background-color: var(--color1);
     display: flex;
     justify-content: center;
+}
+
+.leader_board_box{
+    display: flex;
     align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    row-gap: 1em;
 }
-p{
-    font-size: 15em;
+
+.title{
+    text-align: center;
+    color: var(--color2);
+    font-size: 6em;
+    font-family: 'Kanit', sans-serif;
 }
+
+.leader_board_table{
+    border-collapse: collapse;
+    color: var(--color4);
+    min-width: 20em;
+    max-width: 40em;
+    font-family: 'Roboto', sans-serif;
+    border-radius: .2em .2em .2em .2em;
+    overflow: hidden; 
+}
+
+.leader_board_table thead td{
+    background-color: var(--color2);
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif;
+    padding: 1em 2em;
+    color: var(--color1);
+    text-align: left;
+    
+}
+.leader_board_table tr,.leader_board_table td{
+    padding: 1.5em;
+}
+
+.leader_board_table tbody td{
+    border-bottom: .1em solid var(--color6);
+    transform: 0.3s;
+}
+.leader_board_table tbody td:hover{
+    font-weight: bold;
+}
+
+.leader_board_table tbody tr:last-of-type{
+    border-bottom: .2em solid var(--color2);  
+}
+
