@@ -7,7 +7,14 @@ add_new_args.add_argument("team_name",type=str,required=True,help="Team name is 
 add_new_args.add_argument("games",type=int,required=True,help="Number of is  required.")
 add_new_args.add_argument("victories",type=int,required=True,help="Number of is required.")
 add_new_args.add_argument("defeats",type=int,required=True,help="Number of is required.")
-add_new_args.add_argument("score",type=int,required=True,help="Number of is required.")
+add_new_args.add_argument("score",type=int,required=False,help="Number of is required.")
+
+update_args = reqparse.RequestParser()
+update_args.add_argument("team_name",type=str,help="Team name is optional.")
+update_args.add_argument("games",type=int,help="Number of is  optional.")
+update_args.add_argument("victories",type=int,help="Number of is optional.")
+update_args.add_argument("defeats",type=int,help="Number of is optional.")
+update_args.add_argument("score",type=int,help="Number of is optional.")
 
 team_controller = TeamController()
 
@@ -32,7 +39,16 @@ class Team(Resource):
         return jsonify(team_controller.get_team(id))
 
     def put(self, id: int):
-        pass
+        args = update_args.parse_args()
+        update_team = team_controller.update_team(
+            id=id,
+            team_name=args["team_name"],
+            games=args["games"],
+            victories=args["victories"],
+            defeats=args["defeats"],
+            score=args["score"]
+        )
+        return jsonify(update_team)
 
     def delete(self, id: int):
-        pass
+        return jsonify(team_controller.delete_team(id))

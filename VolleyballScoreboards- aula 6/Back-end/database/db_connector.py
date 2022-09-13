@@ -4,7 +4,7 @@ import sqlite3
 # Create a function to connect to a database with SQLite
 class SQLite_Connector:
 
-    def __init__(self, db_name='database/Scoreboards.db') -> None:
+    def __init__(self, db_name='database/scoreboard.db') -> None:
         self.db_name = db_name
         self.connection = None
         self.cursor = None
@@ -15,7 +15,7 @@ class SQLite_Connector:
     def create_tables(self) -> None:
         
         if not self.db_exit:
-            sql_file = open("database/Scoreboards.sql")
+            sql_file = open("database/scoreboard.sql")
             sql_as_string = sql_file.read()
             self.cursor.executescript(sql_as_string)
             print("[INFO] All tables Created")

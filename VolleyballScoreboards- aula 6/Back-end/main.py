@@ -1,21 +1,17 @@
-from flask import Flask,jsonify
+from flask import Flask
 from flask_cors import CORS
 from flask_restful import Api,Resource
 
 from routes.team import Teams,Team
+from routes.scoreboard import Scoreboard
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 api = Api(app)
-
-class VolleyballScoreboards(Resource):
-    def get(self):
-        return jsonify({"data":"q"})
-
 class VolleyballScoreboards_Api(Resource):
     @staticmethod
     def start() -> None:
-        api.add_resource(VolleyballScoreboards,"/")
+        api.add_resource(Scoreboard,"/")
         api.add_resource(Teams,"/teams")
         api.add_resource(Team,"/team/<int:id>")
 
