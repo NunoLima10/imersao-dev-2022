@@ -25,18 +25,27 @@ function converter(currency,to_currency,value){
 }
 
 function currency_convertor(){
-  var input_currency = document.getElementById("input_currency")
   var status = document.getElementById("status")
+  var input_currency = document.getElementById("input_currency").value
   var select_currency = document.getElementById("select_l").value
   var select_to_currency = document.getElementById("select_r").value
 
-  if (select_currency != select_to_currency){
-    var value = converter(select_currency,select_to_currency,input_currency.value)
+  if (input_currency== ''){
+    status.innerHTML = "Invalid value"
+    return
   }
-  else{
+  if (input_currency < 0){
+    status.innerHTML = "Negative balance"
+    return
+  }
+
+  if (select_currency == select_to_currency){
     status.innerHTML = "Select two different currencies"
+    return
+  }
+
+  converter(select_currency, select_to_currency, input_currency)
+  
   }
 
 
-
-}
