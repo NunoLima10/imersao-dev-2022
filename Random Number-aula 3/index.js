@@ -1,5 +1,4 @@
 var value_of_luck = Math.floor(Math.random() * 11)
-var tys = 3;
 
 function valid_number(){
     var value = document.getElementById("input").value;
@@ -13,10 +12,10 @@ function test_luck(){
     var status = document.getElementById("status");
     var value = document.getElementById("input").value;
     if (!value){return}
-    if (value == value_of_luck){
-        status.innerText = "You won"
-        value_of_luck = Math.floor(Math.random() * 11)
-    }else{
-        status.innerText = "You lost" 
+    if (value != value_of_luck){
+        status.innerText = "You lost"
+        return       
     }
+    status.innerText = "You won"
+        value_of_luck = Math.floor(Math.random() * 11)
 }

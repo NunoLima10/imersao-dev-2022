@@ -76,7 +76,7 @@
 }
 #submit_button:disabled{
     background-color: #8e3d1c;
-    cursor: None;
+    cursor:not-allowed;
 }
 #status{
     color: var(--color1);
