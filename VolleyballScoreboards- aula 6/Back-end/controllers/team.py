@@ -27,11 +27,11 @@ class TeamController(SQLite_Connector):
     
     def update_team(self, **kwargs):
         update_list = [
-            f'team_name="{kwargs["team_name"]}"' if kwargs["team_name"] else '',
-            f'games={kwargs["games"]}' if kwargs["games"] else '',
-            f'victories={kwargs["victories"]}' if kwargs["victories"] else '',
-            f'defeats={kwargs["defeats"]}' if kwargs["defeats"] else '',
-            f'score={kwargs["score"]}' if kwargs["score"] else '',
+            f'team_name="{kwargs["team_name"]}"' if kwargs["team_name"] is not None else '',
+            f'games={kwargs["games"]}' if kwargs["games"] is not None else '',
+            f'victories={kwargs["victories"]}' if kwargs["victories"] is not None else '',
+            f'defeats={kwargs["defeats"]}' if kwargs["defeats"]is not None else '',
+            f'score={kwargs["score"]}' if kwargs["score"] is not None else '',
         ]
         update_list = [value for value in update_list if value!='']
         sql_query = f"""
@@ -39,10 +39,8 @@ class TeamController(SQLite_Connector):
             {",".join(update_list)}
             WHERE id={kwargs["id"]}
         """
-        try:
-            self.execute_sql_query(sql_query,Schemas.team)
-        except Exception as error:
-            print(error)
+        self.execute_sql_query(sql_query,Schemas.team)
+        
         return self.get_team(kwargs["id"])
 
     def delete_team(self, id: int):
