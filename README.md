@@ -19,7 +19,8 @@
 
 > **Disney Flix**
 > 
-> Ver uma lista de desenhos animados da disney também adicionar uma barra de pesquisa
+> Lista de desenhos animados da disney layout foi organizado usando flex-box,
+> todos os card foram criados pelo javascript, na barra de pesquisa pode pesquisar os desenhos pelo nome
 > <img src =images/project3.jpg>
 
 > **VolleyballScoreboards**
